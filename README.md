@@ -43,38 +43,43 @@ Wazuh, Tripwire, and AIDE.
 
 pip install colorama --break-system-packages
 
-## Usage
 
+## Usage
 
 python3 file_integrity_checker.py
 
+Setup
 
-##You'll see a menu:
+mkdir cybertask1
+cd cybertask1
+
+Place file_integrity_checker.py inside this folder.
+
+## You'll see a menu:
 
 Add file(s) to baseline (start monitoring)
 Check integrity (compare current vs baseline)
 View current baseline
 Exit
 
+## Testing — Modified File Scenario
 
-## Example Output
+In a new terminal tab, modify the monitored file:
 
-### Unchanged File
+echo "# test change" >> file_integrity_checker.py
 
-[OK] UNCHANGED : /home/kali/cybertask1/test.txt
-[INFO] Summary → Unchanged: 1 | Modified: 0 | Missing: 0
+Then run the tool again and select Option 2 — the tool will report MODIFIED and show both the original and current hash values.
 
-### Modified File
+## Testing — Missing File Scenario
 
-[ALERT] MODIFIED : /home/kali/cybertask1/test.txt
-[WARNING] Original SHA-256: 3ecca8724b9bf412fd136cac17b4e7b6ed8d88016d7141d0b124579a9f733a3f
-[WARNING] Current SHA-256: d09aa86320400a7fb4fac0ebc425bd89d11e52c7ec0d6cbd797d3edfe469725d
-[INFO] Summary → Unchanged: 0 | Modified: 1 | Missing: 0
+mv file_integrity_checker.py file_integrity_checker_backup.py
+python3 file_integrity_checker_backup.py
 
-### Missing File
+Select Option 2 — the tool will report MISSING.
 
-[ALERT] MISSING : /home/kali/cybertask1/test.txt
-[INFO] Summary → Unchanged: 0 | Modified: 0 | Missing: 1
+## Restore the original filename afterward:
+
+mv file_integrity_checker_backup.py file_integrity_checker
 
 ## Author
 
