@@ -72,7 +72,8 @@ In a new terminal tab, modify the monitored file:
 
 echo "# test change" >> file_integrity_checker.py
 
-Then run the tool again and select Option 2 — the tool will report MODIFIED and show both the original and current hash values.
+Then run the tool again and select 
+Option 2 — the tool will report MODIFIED and show both the original and current hash values.
 
 ## Testing — Missing File Scenario
 
