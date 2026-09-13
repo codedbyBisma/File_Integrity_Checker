@@ -59,8 +59,11 @@ Place file_integrity_checker.py inside this folder.
 ## You'll see a menu:
 
 Add file(s) to baseline (start monitoring)
+
 Check integrity (compare current vs baseline)
+
 View current baseline
+
 Exit
 
 ## Testing — Modified File Scenario
