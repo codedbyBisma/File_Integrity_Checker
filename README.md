@@ -48,7 +48,8 @@ pip install colorama --break-system-packages
 
 python3 file_integrity_checker.py
 
-You'll see a menu:
+
+##You'll see a menu:
 
 Add file(s) to baseline (start monitoring)
 Check integrity (compare current vs baseline)
