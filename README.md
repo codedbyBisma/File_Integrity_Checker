@@ -48,7 +48,8 @@ pip install colorama --break-system-packages
 
 python3 file_integrity_checker.py
 
-Setup
+
+## Setup
 
 mkdir cybertask1
 cd cybertask1
