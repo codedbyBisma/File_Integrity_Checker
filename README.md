@@ -41,15 +41,12 @@ Wazuh, Tripwire, and AIDE.
 
 ## Installation
 
-```bash
 pip install colorama --break-system-packages
-```
 
 ## Usage
 
-```bash
+
 python3 file_integrity_checker.py
-```
 
 You'll see a menu:
 
